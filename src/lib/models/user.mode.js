@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 
-const userSchema = new mongoose.schema({
+const userSchema = new mongoose.Schema({
     cerkId: {
         type:String,
         required: true,
