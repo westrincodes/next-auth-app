@@ -14,13 +14,13 @@ export const createOrUpdateUser = async (
     await connect();
 
     const user = await User.findOneAndUpdate(
-        {clerkId:Id},
+        {clerkId:id},
         {
             $set:{
                 firstName: first_name,
                 lastName: last_name,
                 avatar: image_url,
-                email: email_addresses[0].email,
+                email: email_addresses[0]?.email,
                 username: username, 
             },
         },
